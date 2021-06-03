@@ -1,5 +1,6 @@
 N = int(input())
 move = input().split()
+
 location = [1, 1]
 
 for i in range(len(move)):

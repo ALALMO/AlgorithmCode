@@ -5,13 +5,15 @@ wholeMap = []
 for i in range(N):
     wholeMap.append(list(map(int, input().split())))
 
-dx = [-1,0,1,0]
-dy = [0,1,0,-1]
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 
 stack = []
-stack.append([x,y]) # 시작점
+stack.append([x, y])  # 시작점
 
 turnTime = 0
+
+
 def turn_left():
     global dir
     dir -= 1
@@ -21,8 +23,8 @@ def turn_left():
 
 while True:
     turn_left()
-    nx = x+dx[dir]
-    ny = y+dy[dir]
+    nx = x + dx[dir]
+    ny = y + dy[dir]
 
     if not ([nx, ny] in stack) and wholeMap[nx][ny] == 0:
         stack.append([nx, ny])
