@@ -11,5 +11,5 @@ for num in range(m):
         result += second
     else:
         result += first
-
+        
 print(result)
